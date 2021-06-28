@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="this is my test page ">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Registeration</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <link rel="stylesheet" href="Style/main.css">
+    </head>
+    <body>
+
+        <section class="socials" id="social">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6">
+                        <div class="username py-1">
+                            <i class="bi bi-person-fill"></i> ZiadAhmed
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6">
+                        <div class="social-icons">
+                            <ul class="nav float-end">
+                                <li><a href="https://www.facebook.com/profile.php?id=100006028657997"><i class="bi bi-facebook"></i></a></li>
+                                <li><a href="https://twitter.com/ziad76892"><i class="bi bi-twitter"></i></a></li>
+                                <li><a href="https://www.linkedin.com/in/ziad-ahmed-447751082/"><i class="bi bi-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- --------------------------- Start navbar ------------------------------- -->
+    
+        <nav class="navbar navbar-expand-lg Categories pb-0">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand fw-bold fs-4" href="Home.html">Z <i class="bi bi-cart"></i> Shop</a>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="Home.html"><i class="bi bi-house-door-fill"></i> Home</a>
+                    </li>
+                    <li class="nav-item dropdown" onmouseover="ShowList(this)" onmouseout="CloseList(this)">
+                        <a class="nav-link dropdown-toggle" href="Products.html" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" onclick="chgColor(this)">
+                            <i class="bi bi-bag-fill"></i> Shop
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                            <li><a class="dropdown-item" href="Products.html">Product</a></li>
+                            <li><a class="dropdown-item" href="Cart.html">Cart</a></li>
+                            <li><a class="dropdown-item" href="CheckOut.html">Check Out</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="LogIn.html"><i class="bi bi-box-arrow-in-right"></i> Register/Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="LogIn.html"><i class="bi bi-inbox"></i> Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-search" type="submit">Search</button>
+                </form>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                    <strong id="cat">Categories</strong>  
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown" onmouseover="ShowList(this)" onmouseout="CloseList(this)">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Winter Collection
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                <li><a class="dropdown-item" href="#">Sweat Shirt</a></li>
+                                <li><a class="dropdown-item" href="#">Pullover</a></li>
+                                <li><a class="dropdown-item" href="#">Jackit</a></li>
+                                <li><a class="dropdown-item" href="#">Coat</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown" onmouseover="ShowList(this)" onmouseout="CloseList(this)">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Summer Collection
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                <li><a class="dropdown-item" href="#">T-Shirt</a></li>
+                                <li><a class="dropdown-item" href="#">Polo-Shirt</a></li>
+                                <li><a class="dropdown-item" href="#">Short</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Mens</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Womens</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Kids</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Interiors</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Bags</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- -------------------------------End navbar------------------------------------- -->
+
+        <!-- -------------------------------Start Cart Shopping --------------------------- -->
+         
+        <section class="cart-shopping">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active ps-0" aria-current="page" id="breadcrumb-item">Products</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12">
+                        <div class="col-lg-12 pb-5 text-center">
+                            <img src="images/cart/advertisement.jpg" alt="" style="width: 85%;"/>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-3 Filter-Section">
+                                    <section class="features-items py-1 mb-4">
+                                        <h2>Product Type</h2>
+                                        <div class="product-type pt-2 pb-4">
+                                            <div><a href="#">Jeans</a></div>
+                                            <div><a href="#">Jogger</a></div>
+                                            <div><a href="#">Pants</a></div>
+                                            <div><a href="#">Shoes</a></div>
+                                            <div><a href="#">Short</a></div>
+                                            <div><a href="#">T-shirt</a></div>
+                                            <div><a href="#">Sweat pants</a></div>
+                                        </div>
+                                    </section>
+                                    <section class="features-items py-1">
+                                        <h2>Size</h2>
+                                        <div class="Size py-3">
+                                            <div>
+                                                <a href="#">31</a>
+                                                <a href="#">32</a>
+                                                <a href="#">33</a>
+                                                <a href="#">34</a>
+                                                <a href="#">36</a>
+                                            </div> <br>
+                                            <div>
+                                                <a href="#">42</a>
+                                                <a href="#">44</a>
+                                                <a href="#">46</a>
+                                                <a href="#">30</a>
+                                                <a href="#">29</a>
+                                            </div> <br>
+                                            <div>
+                                                <a href="#">2XL</a>
+                                                <a href="#">3XL</a>
+                                                <a href="#">L</a>
+                                                <a href="#">XL</a>
+                                                <a href="#">M</a>
+                                            </div> <br>
+                                            <div>
+                                                <a href="#">5XL</a>
+                                                <a href="#">6XL</a>
+                                                <a href="#">4XL</a>
+                                                <a href="#">40</a>
+                                            </div> <br>
+                                            <div>
+                                                <a href="#">38</a>
+                                                <a href="#">12</a>
+                                                <a href="#">14</a>
+                                                <a href="#">16</a>
+                                                <a href="#">11</a>
+                                            </div> 
+                                        </div>
+                                    </section>
+                                    <section class="features-items py-1">
+                                        <h2>Size</h2>
+                                        <div class="Color py-3">
+                                            <div>
+                                                <a href="#">black</a>
+                                                <a href="#">navy</a>
+                                                <a href="#">indiego</a>
+                                            </div> <br>
+                                            <div>
+                                                <a href="#">l-red</a>
+                                                <a href="#">off white</a>
+                                                <a href="#">l-blue</a>
+                                            </div> <br>
+                                            <div>
+                                                <a href="#">l-grey</a>
+                                                <a href="#">d-blue</a>
+                                                <a href="#">cafe</a>
+                                            </div> <br>
+                                            <div>
+                                                <a href="#">l-green</a>
+                                                <a href="#">camel</a>
+                                                <a href="#">pink</a>
+                                            </div> <br>
+                                            <div>
+                                                <a href="#">mauve</a>
+                                                <a href="#">orange</a>
+                                                <a href="#">fuchsia</a>
+                                            </div> <br>
+                                            <div>
+                                                <a href="#">Kashmir</a>
+                                                <a href="#">sky</a>
+                                                <a href="#">melon</a>
+                                            </div> <br />
+                                            <div>
+                                                <a href="#">blue</a>
+                                                <a href="#">d-green</a>
+                                                <a href="#">green</a>
+                                            </div> <br>
+                                            <div>
+                                                <a href="#">yellow</a>
+                                                <a href="#">burgundy</a>
+                                                <a href="#">beige</a>
+                                            </div> <br>
+                                            <div>
+                                                <a href="#">white</a>
+                                                <a href="#">olive</a>
+                                                <a href="#">torquoiz</a>
+                                            </div> <br>
+                                            <div>
+                                                <a href="#">d-grey</a>
+                                                <a href="#">lemon</a>
+                                                <a href="#">l-olive</a>
+                                            </div> <br>
+                                            <div>
+                                                <a href="#">D-olive</a>
+                                                <a href="#">mango</a>
+                                                <a href="#">purple</a>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                                <div class="col-lg-9">
+                                    <section class="features-items py-1" id="Products">
+                                        <h2>Features Items</h2>
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-lg-12 pb-3 Filter">
+                                                    <!-- Button trigger modal -->
+                                                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#Categories">
+                                                            <i class="bi bi-funnel"></i> Filter
+                                                    </button>
+            
+                                                    <!-- Modal -->
+                                                    <div class="modal fade" id="Categories" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                                            <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLabel">Filter</h5>
+                                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <section class="features-items py-1 mb-4">
+                                                                    <h2>Product Type</h2>
+                                                                    <div class="product-type pt-2 pb-4">
+                                                                        <div><a href="#">Jeans</a></div>
+                                                                        <div><a href="#">Jogger</a></div>
+                                                                        <div><a href="#">Pants</a></div>
+                                                                        <div><a href="#">Shoes</a></div>
+                                                                        <div><a href="#">Short</a></div>
+                                                                        <div><a href="#">T-shirt</a></div>
+                                                                        <div><a href="#">Sweat pants</a></div>
+                                                                    </div>
+                                                                </section>
+                                                                <section class="features-items py-1">
+                                                                    <h2>Size</h2>
+                                                                    <div class="Size py-3">
+                                                                        <div>
+                                                                            <a href="#">31</a>
+                                                                            <a href="#">32</a>
+                                                                            <a href="#">33</a>
+                                                                            <a href="#">34</a>
+                                                                            <a href="#">36</a>
+                                                                            <a href="#">38</a>
+                                                                        </div> <br>
+                                                                        <div>
+                                                                            <a href="#">40</a>
+                                                                            <a href="#">42</a>
+                                                                            <a href="#">44</a>
+                                                                            <a href="#">46</a>
+                                                                            <a href="#">30</a>
+                                                                            <a href="#">29</a>
+                                                                        </div> <br>
+                                                                        <div>
+                                                                            <a href="#">2XL</a>
+                                                                            <a href="#">3XL</a>
+                                                                            <a href="#">L</a>
+                                                                            <a href="#">XL</a>
+                                                                            <a href="#">M</a>
+                                                                        </div> <br>
+                                                                        <div>
+                                                                            <a href="#">5XL</a>
+                                                                            <a href="#">6XL</a>
+                                                                            <a href="#">4XL</a>
+                                                                            <a href="#">6</a>
+                                                                            <a href="#">4</a>
+                                                                        </div> <br>
+                                                                        <div>
+                                                                            <a href="#">8</a>
+                                                                            <a href="#">12</a>
+                                                                            <a href="#">14</a>
+                                                                            <a href="#">16</a>
+                                                                            <a href="#">11</a>
+                                                                            <a href="#">15</a>
+                                                                        </div> 
+                                                                    </div>
+                                                                </section>
+                                                                <section class="features-items py-1">
+                                                                    <h2>Size</h2>
+                                                                    <div class="Color py-3">
+                                                                        <div>
+                                                                            <a href="#">black</a>
+                                                                            <a href="#">navy</a>
+                                                                            <a href="#">indiego</a>
+                                                                        </div> <br>
+                                                                        <div>
+                                                                            <a href="#">l-red</a>
+                                                                            <a href="#">off white</a>
+                                                                            <a href="#">l-blue</a>
+                                                                        </div> <br>
+                                                                        <div>
+                                                                            <a href="#">l-grey</a>
+                                                                            <a href="#">d-blue</a>
+                                                                            <a href="#">cafe</a>
+                                                                        </div> <br>
+                                                                        <div>
+                                                                            <a href="#">l-green</a>
+                                                                            <a href="#">camel</a>
+                                                                            <a href="#">pink</a>
+                                                                        </div> <br>
+                                                                        <div>
+                                                                            <a href="#">mauve</a>
+                                                                            <a href="#">orange</a>
+                                                                            <a href="#">fuchsia</a>
+                                                                        </div> <br>
+                                                                        <div>
+                                                                            <a href="#">Kashmir</a>
+                                                                            <a href="#">sky</a>
+                                                                            <a href="#">melon</a>
+                                                                        </div> <br />
+                                                                        <div>
+                                                                            <a href="#">blue</a>
+                                                                            <a href="#">d-green</a>
+                                                                            <a href="#">green</a>
+                                                                        </div> <br>
+                                                                        <div>
+                                                                            <a href="#">yellow</a>
+                                                                            <a href="#">burgundy</a>
+                                                                            <a href="#">beige</a>
+                                                                        </div> <br>
+                                                                        <div>
+                                                                            <a href="#">white</a>
+                                                                            <a href="#">olive</a>
+                                                                            <a href="#">torquoiz</a>
+                                                                        </div> <br>
+                                                                        <div>
+                                                                            <a href="#">d-grey</a>
+                                                                            <a href="#">lemon</a>
+                                                                            <a href="#">l-olive</a>
+                                                                        </div> <br>
+                                                                        <div>
+                                                                            <a href="#">D-olive</a>
+                                                                            <a href="#">mango</a>
+                                                                            <a href="#">purple</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </section>                  
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="product-card">
+                                                        <div class="product-info text-center">
+                                                            <img src="images/home/Product/product1.jpg">
+                                                            <h2 class="mt-4 mb-4">$56</h2>
+                                                            <p>Easy Polo Black Edition</p>
+                                                            <a href="#" class="btn add-to-cart"><i class="bi bi-cart-plus-fill"></i> Add to cart</a>
+                                                        </div>
+                                                        <div class="product-action">
+                                                            <ul class="nav nav-pills">
+                                                                <li class="nav-item">
+                                                                    <a href="#" class="nav-link"><i class="bi bi-plus-square-fill"></i> Add Wishlist</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a href="ProductDetails.html" class="nav-link"><i class="bi bi-plus-square-fill"></i> Details</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="product-card">
+                                                        <div class="product-info text-center">
+                                                            <img src="images/home/Product/product2.jpg">
+                                                            <h2 class="mt-4 mb-4">$56</h2>
+                                                            <p>Easy Polo Black Edition</p>
+                                                            <a href="#" class="btn add-to-cart"><i class="bi bi-cart-plus-fill"></i> Add to cart</a>
+                                                        </div>
+                                                        <div class="product-action">
+                                                            <ul class="nav nav-pills">
+                                                                <li class="nav-item">
+                                                                    <a href="#" class="nav-link"><i class="bi bi-plus-square-fill"></i> Add Wishlist</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a href="ProductDetails.html" class="nav-link"><i class="bi bi-plus-square-fill"></i> Details</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="product-card">
+                                                        <div class="product-info text-center">
+                                                            <img src="images/home/Product/product3.jpg">
+                                                            <h2 class="mt-4 mb-4">$56</h2>
+                                                            <p>Easy Polo Black Edition</p>
+                                                            <a href="#" class="btn add-to-cart"><i class="bi bi-cart-plus-fill"></i> Add to cart</a>
+                                                        </div>
+                                                        <div class="product-action">
+                                                            <ul class="nav nav-pills">
+                                                                <li class="nav-item">
+                                                                    <a href="#" class="nav-link"><i class="bi bi-plus-square-fill"></i> Add Wishlist</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a href="ProductDetails.html" class="nav-link"><i class="bi bi-plus-square-fill"></i> Details</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="product-card">
+                                                        <div class="product-info text-center">
+                                                            <img src="images/home/Product/product4.jpg">
+                                                            <h2 class="mt-4 mb-4">$56</h2>
+                                                            <p>Easy Polo Black Edition</p>
+                                                            <a href="#" class="btn add-to-cart"><i class="bi bi-cart-plus-fill"></i> Add to cart</a>
+                                                        </div>
+                                                        <div class="product-action">
+                                                            <ul class="nav nav-pills">
+                                                                <li class="nav-item">
+                                                                    <a href="#" class="nav-link"><i class="bi bi-plus-square-fill"></i> Add Wishlist</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a href="ProductDetails.html" class="nav-link"><i class="bi bi-plus-square-fill"></i> Details</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="product-card">
+                                                        <div class="product-info text-center">
+                                                            <img src="images/home/Product/product1.jpg">
+                                                            <h2 class="mt-4 mb-4">$56</h2>
+                                                            <p>Easy Polo Black Edition</p>
+                                                            <a href="#" class="btn add-to-cart"><i class="bi bi-cart-plus-fill"></i> Add to cart</a>
+                                                        </div>
+                                                        <div class="product-action">
+                                                            <ul class="nav nav-pills">
+                                                                <li class="nav-item">
+                                                                    <a href="#" class="nav-link"><i class="bi bi-plus-square-fill"></i> Add Wishlist</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a href="ProductDetails.html" class="nav-link"><i class="bi bi-plus-square-fill"></i> Details</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="product-card">
+                                                        <div class="product-info text-center">
+                                                            <img src="images/home/Product/product2.jpg">
+                                                            <h2 class="mt-4 mb-4">$56</h2>
+                                                            <p>Easy Polo Black Edition</p>
+                                                            <a href="#" class="btn add-to-cart"><i class="bi bi-cart-plus-fill"></i> Add to cart</a>
+                                                        </div>
+                                                        <div class="product-action">
+                                                            <ul class="nav nav-pills">
+                                                                <li class="nav-item">
+                                                                    <a href="#" class="nav-link"><i class="bi bi-plus-square-fill"></i> Add Wishlist</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a href="ProductDetails.html" class="nav-link"><i class="bi bi-plus-square-fill"></i> Details</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="product-card">
+                                                        <div class="product-info text-center">
+                                                            <img src="images/home/Product/product3.jpg">
+                                                            <h2 class="mt-4 mb-4">$56</h2>
+                                                            <p>Easy Polo Black Edition</p>
+                                                            <a href="#" class="btn add-to-cart"><i class="bi bi-cart-plus-fill"></i> Add to cart</a>
+                                                        </div>
+                                                        <div class="product-action">
+                                                            <ul class="nav nav-pills">
+                                                                <li class="nav-item">
+                                                                    <a href="#" class="nav-link"><i class="bi bi-plus-square-fill"></i> Add Wishlist</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a href="ProductDetails.html" class="nav-link"><i class="bi bi-plus-square-fill"></i> Details</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="product-card">
+                                                        <div class="product-info text-center">
+                                                            <img src="images/home/Product/product4.jpg">
+                                                            <h2 class="mt-4 mb-4">$56</h2>
+                                                            <p>Easy Polo Black Edition</p>
+                                                            <a href="#" class="btn add-to-cart"><i class="bi bi-cart-plus-fill"></i> Add to cart</a>
+                                                        </div>
+                                                        <div class="product-action">
+                                                            <ul class="nav nav-pills">
+                                                                <li class="nav-item">
+                                                                    <a href="#" class="nav-link"><i class="bi bi-plus-square-fill"></i> Add Wishlist</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a href="ProductDetails.html" class="nav-link"><i class="bi bi-plus-square-fill"></i> Details</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="product-card">
+                                                        <div class="product-info text-center">
+                                                            <img src="images/home/Product/product1.jpg">
+                                                            <h2 class="mt-4 mb-4">$56</h2>
+                                                            <p>Easy Polo Black Edition</p>
+                                                            <a href="#" class="btn add-to-cart"><i class="bi bi-cart-plus-fill"></i> Add to cart</a>
+                                                        </div>
+                                                        <div class="product-action">
+                                                            <ul class="nav nav-pills">
+                                                                <li class="nav-item">
+                                                                    <a href="#" class="nav-link"><i class="bi bi-plus-square-fill"></i> Add Wishlist</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a href="ProductDetails.html" class="nav-link"><i class="bi bi-plus-square-fill"></i> Details</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="product-card">
+                                                        <div class="product-info text-center">
+                                                            <img src="images/home/Product/product2.jpg">
+                                                            <h2 class="mt-4 mb-4">$56</h2>
+                                                            <p>Easy Polo Black Edition</p>
+                                                            <a href="#" class="btn add-to-cart"><i class="bi bi-cart-plus-fill"></i> Add to cart</a>
+                                                        </div>
+                                                        <div class="product-action">
+                                                            <ul class="nav nav-pills">
+                                                                <li class="nav-item">
+                                                                    <a href="#" class="nav-link"><i class="bi bi-plus-square-fill"></i> Add Wishlist</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a href="ProductDetails.html" class="nav-link"><i class="bi bi-plus-square-fill"></i> Details</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="product-card">
+                                                        <div class="product-info text-center">
+                                                            <img src="images/home/Product/product3.jpg">
+                                                            <h2 class="mt-4 mb-4">$56</h2>
+                                                            <p>Easy Polo Black Edition</p>
+                                                            <a href="#" class="btn add-to-cart"><i class="bi bi-cart-plus-fill"></i> Add to cart</a>
+                                                        </div>
+                                                        <div class="product-action">
+                                                            <ul class="nav nav-pills">
+                                                                <li class="nav-item">
+                                                                    <a href="#" class="nav-link"><i class="bi bi-plus-square-fill"></i> Add Wishlist</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a href="ProductDetails.html" class="nav-link"><i class="bi bi-plus-square-fill"></i> Details</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="product-card">
+                                                        <div class="product-info text-center">
+                                                            <img src="images/home/Product/product4.jpg">
+                                                            <h2 class="mt-4 mb-4">$56</h2>
+                                                            <p>Easy Polo Black Edition</p>
+                                                            <a href="#" class="btn add-to-cart"><i class="bi bi-cart-plus-fill"></i> Add to cart</a>
+                                                        </div>
+                                                        <div class="product-action">
+                                                            <ul class="nav nav-pills">
+                                                                <li class="nav-item">
+                                                                    <a href="#" class="nav-link"><i class="bi bi-plus-square-fill"></i> Add Wishlist</a>
+                                                                </li>
+                                                                <li class="nav-item">
+                                                                    <a href="ProductDetails.html" class="nav-link"><i class="bi bi-plus-square-fill"></i> Details</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <nav aria-label="...">
+                                                    <ul class="pagination">
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                                                        </li>
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="#">1</a>
+                                                        </li>
+                                                        <li class="page-item active" aria-current="page">
+                                                            <a class="page-link" href="#">2</a>
+                                                        </li>
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="#">3</a>
+                                                        </li>
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="#">Next</a>
+                                                        </li>
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                    </section> <br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- -------------------------------End Cart Shopping --------------------------- -->
+        
+        <!-- -------------------------------Start footer ------------------------------- -->
+
+        <footer id="footer"><!--Footer-->
+            <div class="footer-widget py-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-xs-12 pt-4">
+                            <div class="single-widget">
+                                <h2>Service</h2>
+                                <ul class="nav">
+                                    <li><a href="#">Online Help</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="#">Order Status</a></li>
+                                    <li><a href="#">Change Location</a></li>
+                                    <li><a href="#">FAQ’s</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-xs-12 pt-4">
+                            <div class="single-widget">
+                                <h2>Quock Shop</h2>
+                                <ul class="nav">
+                                    <li><a href="#">T-Shirt</a></li>
+                                    <li><a href="#">Mens</a></li>
+                                    <li><a href="#">Womens</a></li>
+                                    <li><a href="#">Gift Cards</a></li>
+                                    <li><a href="#">Shoes</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-xs-12 pt-4">
+                            <div class="single-widget">
+                                <h2>Policies</h2>
+                                <ul class="nav">
+                                    <li><a href="#">Terms of Use</a></li>
+                                    <li><a href="#">Privecy Policy</a></li>
+                                    <li><a href="#">Refund Policy</a></li>
+                                    <li><a href="#">Billing System</a></li>
+                                    <li><a href="#">Ticket System</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-xs-12 pt-4">
+                            <div class="single-widget">
+                                <h2>About Shopper</h2>
+                                <ul class="nav">
+                                    <li><a href="#">Company Information</a></li>
+                                    <li><a href="#">Careers</a></li>
+                                    <li><a href="#">Store Location</a></li>
+                                    <li><a href="#">Affillate Program</a></li>
+                                    <li><a href="#">Copyright</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12 pt-4">
+                            <div class="single-widget">
+                                <h2 class="text-center">About Shopper</h2>
+                                <form action="#" class="form">
+                                    <span>
+                                        <input type="text" placeholder="Your email address" class="form-control"/>
+                                        <button type="submit" class="btn"><i class="bi bi-arrow-right-circle-fill"></i></button>
+                                    </span>
+                                    <p class="text-center">Get the most recent updates from <br />our site and be updated your self...</p>
+                                </form>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div>
+                    <p class="pt-2 ps-5">Copyright © 2013 E-SHOPPER Inc. All rights reserved.</p>
+                </div>
+                <div>
+                    <p class="pt-2 pe-5">Designed by <span><a target="_blank" href="http://www.themeum.com">ZiadAhmed</a></span></p>
+                </div>
+            </div>
+            
+        </footer><!--/Footer-->
+
+        <!-- -------------------------------End footer ------------------------------- -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+        <script src="Script/script.js"></script>
+
+        <a id="scrollUp" href="#social" class="fixed-bottom mx-4">
+            <i class="bi bi-caret-up"></i>
+        </a>
+    </body>
+</html>
